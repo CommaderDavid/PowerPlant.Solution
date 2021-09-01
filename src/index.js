@@ -11,7 +11,7 @@ const storeState = () => {
 const stateControl = storeState();
 
 // This is a function factory. We can easily create more specific functions that alter a plant's soil, water, and light to varying degrees.
-const changeState = (prop) => {
+export const changeState = (prop) => {
     return (value) => {
         return (state) => ({
             ...state,
@@ -73,7 +73,7 @@ $(document).ready(function () {
         $('.states').show();
         const currentState = stateControl();
         $('#soil-value').text(`Soil: ${currentState.soil}`);
-        $('#water-value').text(`Water: ${currentState.hydrate}`);
+        $('#water-value').text(`Water: ${currentState.water}`);
         $('#light-value').text(`Light: ${currentState.light}`);
     });
 });
