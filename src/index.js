@@ -1,5 +1,5 @@
 import { changeState, stateControl } from "./plantState";
-import $ from 'jquery';
+import { plant } from "./plantState";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
@@ -12,6 +12,10 @@ const superWater = changeState("water")(5);
 
 const light = changeState("light")(1);
 const solarCharge = changeState("light")(5);
+
+const normal = plant(1);
+const strong = plant(4);
+const posion = plant(-3);
 
 $(document).ready(function () {
     $('.states').hide();
