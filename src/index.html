@@ -12,10 +12,16 @@
     <div class="row">
         <div class="column">
             <form id="plantSelection">
-                <label for="plants"></label>
+                <label for="plants">Choose your plant:</label>
+                <select name="plants" id="plants">
+                    <option value="normal">Normal Plant</option>
+                    <option value="super">Super Plant</option>
+                    <option value="posion">Posion Plant</option>
+                </select>
+                <button class="btn-danger" type="submit"></button>
             </form>
         </div>
-        <div class="column">
+        <div class="column" id="game">
             <div class="grow-buttons">
                 <button class="btn-success" id="feed">Add soil</button>
                 <button class="btn-success" id="blueFeed">Add super ferdiliazer</button>
@@ -29,7 +35,7 @@
                 <button class="btn-success" id="show-state">Current Stats</button>
             </div>
         </div>
-        <div class="column">
+        <div class="column" id="score">
             <div class="states">
                 <h1>Your Plant's Values</h1>
                 <h3>Soil: <div id="soil-value">0</div>
