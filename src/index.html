@@ -9,27 +9,36 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="grow-buttons">
-            <button class="btn-success" id="feed">Add soil</button>
-            <button class="btn-success" id="blueFeed">Add super ferdiliazer</button>
-            <br>
-            <button class="btn-success" id="hydrate">Add Water</button>
-            <button class="btn-success" id="superHydrate">Add Mineral Water</button>
-            <br>
-            <button class="btn-success" id="light">Add Light</button>
-            <button class="btn-success" id="solar">Add Solar Charge</button>
-            <br>
-            <button class="btn-success" id="show-state">Current Stats</button>
+    <div class="row">
+        <div class="column">
+            <form id="plantSelection">
+                <label for="plants"></label>
+            </form>
         </div>
-        <div class="states">
-            <h1>Your Plant's Values</h1>
-            <h3>Soil: <div id="soil-value">0</div>
-            </h3>
-            <h3>Water: <div id="water-value">0</div>
-            </h3>
-            <h3>Light: <div id="light-value">0</div>
-            </h3>
+        <div class="column">
+            <div class="grow-buttons">
+                <button class="btn-success" id="feed">Add soil</button>
+                <button class="btn-success" id="blueFeed">Add super ferdiliazer</button>
+                <br>
+                <button class="btn-success" id="hydrate">Add Water</button>
+                <button class="btn-success" id="superHydrate">Add Mineral Water</button>
+                <br>
+                <button class="btn-success" id="light">Add Light</button>
+                <button class="btn-success" id="solar">Add Solar Charge</button>
+                <br>
+                <button class="btn-success" id="show-state">Current Stats</button>
+            </div>
+        </div>
+        <div class="column">
+            <div class="states">
+                <h1>Your Plant's Values</h1>
+                <h3>Soil: <div id="soil-value">0</div>
+                </h3>
+                <h3>Water: <div id="water-value">0</div>
+                </h3>
+                <h3>Light: <div id="light-value">0</div>
+                </h3>
+            </div>
         </div>
     </div>
 </body>
