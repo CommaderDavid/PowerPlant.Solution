@@ -1,4 +1,5 @@
 import { stateControl, changeState } from "./../src/plantState.js";
+import { plant } from "./../src/newPlants.js";
 
 describe('stateControl', () => {
     let newState = stateControl;
@@ -16,3 +17,10 @@ describe('stateControl', () => {
     });
 });
 
+describe('newPlant', () => {
+    test('should show how different kinds of plants can be made', () => {
+        let normalPlant = plant(2);
+        let plantTest = normalPlant(4);
+        expect(plantTest).toEqual(8);
+    });
+});
