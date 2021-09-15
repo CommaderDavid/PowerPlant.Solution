@@ -1,5 +1,6 @@
 import { changeState, stateControl } from "./plantState";
-import { plant } from "./plantState";
+import { plant } from "./newPlants";
+import $ from "jquery";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
@@ -13,42 +14,61 @@ const superWater = changeState("water")(5);
 const light = changeState("light")(1);
 const solarCharge = changeState("light")(5);
 
-const normal = plant(1);
-const strong = plant(4);
-const posion = plant(-3);
-
 $(document).ready(function () {
-    $('.states').hide();
+    const normalPlant = plant(1);
+    const normalStrong = plant(4);
+    const normalPosion = plant(-3);
+    let userSelectedPlant;
+    $('#plantSelection').submit(function (e) {
+        e.preventDefault();
+        const plants = $("#plants").val();
+        if (plants == "normal") {
+            userSelectedPlant = normalPlant;
+            return userSelectedPlant;
+        } else if (plants == "super") {
+            userSelectedPlant = normalStrong;
+            return userSelectedPlant;
+        } else if (plants == "posion") {
+            userSelectedPlant = normalPosion;
+            return userSelectedPlant;
+        }
+    });
     // This function has side effects because we are using jQuery. Manipulating the DOM will always be a side effect.
     //Note that we only use one of our functions to alter soil. You can easily add more.
     $('#feed').click(function () {
         const newState = stateControl(feed);
-        $('#soil-value').text(`Soil: ${newState.soil}`);
+        const currentPlant = userSelectedPlant(newState.soil);
+        $('#soil-value').text(`${currentPlant}`);
     });
 
     $('#blueFeed').click(function () {
         const newState = stateControl(blueFood);
-        $('#soil-value').text(`Soil: ${newState.soil}`);
+        const currentPlant = userSelectedPlant(newState.soil);
+        $('#soil-value').text(`${currentPlant}`);
     });
 
     $('#hydrate').click(function () {
         const newState = stateControl(hydrate);
-        $('#water-value').text(`Water: ${newState.water}`);
+        const currentPlant = userSelectedPlant(newState.water);
+        $('#water-value').text(`${currentPlant}`);
     });
 
     $('#superHydrate').click(function () {
         const newState = stateControl(superWater);
-        $('#water-value').text(`Water: ${newState.water}`);
+        const currentPlant = userSelectedPlant(newState.water);
+        $('#water-value').text(`${currentPlant}`);
     });
 
     $('#light').click(function () {
         const newState = stateControl(light);
-        $('#light-value').text(`Light: ${newState.light}`);
+        const currentPlant = userSelectedPlant(newState.light);
+        $('#light-value').text(`${currentPlant}`);
     });
 
     $('#solar').click(function () {
         const newState = stateControl(solarCharge);
-        $('#light-value').text(`Light: ${newState.light}`);
+        const currentPlant = userSelectedPlant(newState.light);
+        $('#light-value').text(`${currentPlant}`);
     });
 
     // This function doesn't actually do anything useful in this application - it just demonstrates how
@@ -59,8 +79,8 @@ $(document).ready(function () {
         // We just need to call stateControl() without arguments to see our current state.
         $('.states').show();
         const currentState = stateControl();
-        $('#soil-value').text(`Soil: ${currentState.soil}`);
-        $('#water-value').text(`Water: ${currentState.water}`);
-        $('#light-value').text(`Light: ${currentState.light}`);
+        $('#soil-value').text(`${currentState.soil}`);
+        $('#water-value').text(`${currentState.water}`);
+        $('#light-value').text(`${currentState.light}`);
     });
 });
