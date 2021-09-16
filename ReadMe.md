@@ -67,8 +67,13 @@ Go to my GitHub repository here, , and click on the green 'Code' button to clone
 #### Running/viewing application:
 
 1. Open your preferred terminal and navigate to `$cd "Insert name of folder for copy"`
-2. Run `$npm install`
-3. Run `$npm run start` to start the progam
+2. Create a .gitignore file with:
+    * `node_modules/`
+    * `.DS_Store`
+    * `dist/`
+    * `.env`
+3. Run `$npm install`
+4. Run `$npm run start` to start the progam
 
 --------------------------
 
