@@ -4,17 +4,17 @@
 </h1>
 
 <p align = "center">
-This application  </p>
-<p align = "center"> Created , 2021 </p>
+This application is designed to have a player grow a plant. </p>
+<p align = "center"> Created September 3, 2021 </p>
 
 <p align = "center">
- By David
+ By David Boedigheimer
  </p>
 
 --------------------
 
 ## 📖  Description
-
+This program is designed to create a game where the user grows different style of plants. The user selects the type of plant they want to grow, then add water, soil, and light to it to help it grow.
 
 --------------------
 
@@ -22,7 +22,10 @@ This application  </p>
 
 This project uses the following technologies:
 
-- 
+- Javascript
+- JQuery
+- Webpack
+- Bootstrap
 
 -------------------
 
@@ -31,8 +34,8 @@ This project uses the following technologies:
 
 | Gameplay function | Input | Output |
 | :------------- | :------------- | :------------- |
-|  |  |  |
-|  |  |  |
+| Plant selection: the user selects which plant they want to grow | dropdown selection of three plants | the inputs from the user are increased or decreased |
+| Managing your plant: by clicking on different water, soil, and light, the user can modify the plants levels |  |  |
 |  |  |  |
 
 </details>
@@ -55,15 +58,17 @@ This project uses the following technologies:
 
 #### To run this project locally you will need:
 
-- **ASP .NET Core :** 
+- **webpack :** 
 - **JQuery :**  
 #### To Download:
 
-
+Go to my GitHub repository here, , and click on the green 'Code' button to clone the repository, Open with GitHub Desktop OR Download the ZIP file
 
 #### Running/viewing application:
 
-1. 
+1. Open your preferred terminal and navigate to `$cd "Insert name of folder for copy"`
+2. Run `$npm install`
+3. Run `$npm run start` to start the progam
 
 --------------------------
 
