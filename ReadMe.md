@@ -62,7 +62,7 @@ This project uses the following technologies:
 - **JQuery :**  
 #### To Download:
 
-Go to my GitHub repository here, , and click on the green 'Code' button to clone the repository, Open with GitHub Desktop OR Download the ZIP file
+Go to my GitHub repository here, https://github.com/CommaderDavid/PowerPlant.Solution, and click on the green 'Code' button to clone the repository, Open with GitHub Desktop OR Download the ZIP file
 
 #### Running/viewing application:
 
